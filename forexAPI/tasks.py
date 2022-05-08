@@ -8,9 +8,9 @@ from .models import Currency
 # some heavy stuff here
 def create_currency():
     print('Creating forex data ..')
-    req = Request('https://www.investing.com/currencies/single-currency-crosses', headers={'User-Agent': 'Mozilla/5.0'})
+    # req = Request('https://www.investing.com/currencies/single-currency-crosses', headers={'User-Agent': 'Mozilla/5.0'})
     html = urlopen(req).read()
-    bs = BeautifulSoup(html, 'html.parser')
+    # bs = BeautifulSoup(html, 'html.parser')
     # get first 5 rows
     currencies = bs.find("tbody").find_all("tr")[0:5]
     # enumerate rows to include index inside class name
